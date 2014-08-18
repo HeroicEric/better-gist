@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BetterGist</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/better-gist.css">
+  </head>
+  <body>
+    <script>
+      window.BetterGistENV = {{ENV}};
+      window.EmberENV = window.BetterGistENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/better-gist.js"></script>
+    <script>
+      window.BetterGist = require('better-gist/app')['default'].create(BetterGistENV.APP);
+    </script>
+  </body>
+</html>
