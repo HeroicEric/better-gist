@@ -1,0 +1,23 @@
+<p><strong>Description:</strong> {{description}}</p>
+
+{{#each files}}
+  <h3>{{filename}} - {{language}}</h3>
+
+  <pre>
+  {{#each lines}}
+    <span>{{lineNumber}}:</span> <span>{{body}}</span>
+
+    {{#each comments}}
+      <h3>@{{user.login}}:</h3>
+      <p>{{filename}}:{{line}}</p>
+      <p>{{body}}</p>
+    {{/each}}
+  {{/each}}
+  </pre>
+{{/each}}
+
+{{#each comments}}
+  <h3>@{{user.login}}:</h3>
+  <p>{{filename}}:{{line}}</p>
+  <p>{{body}}</p>
+{{/each}}
